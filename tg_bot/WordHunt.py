@@ -115,7 +115,7 @@ def scoring(update, context):
         guess = guess.lower()
         print(guess)
         if guess in games[chat_id].found_words:
-            found_notif = "<b>{}</b> has already been found!".format(guess)
+            found_notif = "<b>{}</b> zaten bulundu!".format(guess)
             context.bot.send_message(chat_id=update.effective_chat.id, parse_mode = 'HTML', text=found_notif)
         elif guess in games[chat_id].score_words:
             score = len(guess) * len(guess)
@@ -175,11 +175,15 @@ def help(update, context):
     """
     context.bot.send_message(chat_id=update.effective_chat.id, parse_mode = 'HTML', text=helptext)
         
-
+def a(bot, update):
+    bot.send_message(chat_id=update.effective_chat.id, text="sssssssssss")
 play_handler = CommandHandler('play_word', play)
 updater.dispatcher.add_handler(play_handler)
 
 end_handler = CommandHandler('end', end_game)
+updater.dispatcher.add_handler(end_handler)
+
+end_handler = CommandHandler('a', a)
 updater.dispatcher.add_handler(end_handler)
 
 help_handler = CommandHandler('help', help)
