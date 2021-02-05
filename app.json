@@ -1,0 +1,31 @@
+{
+  "logo": "https://i.hizliresim.com/VuMLF7.jpg",
+  "name": "FireqanQHelpBot",
+  "description": "by coder ==> t.me/fireganqQ!",
+  "keywords": [
+    "telegram",
+    "best",
+    "group",
+    "manager",
+    "3"
+  ],
+  "repository": "https://github.com/fireganqQ/dnmee",
+  "env": {
+    "ENV": {
+      "description": "Bunu HERHANGİ BİR ŞEY olarak ayarlamak, ortam değişkenlerini etkinleştirir",
+      "value": "ANYTHING"
+    },
+    "TOKEN": {
+      "description": "Bir dizge olarak bot jetonunuz.",
+      "value": ""
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "10"
+      }
+    }]
+
+}
