@@ -178,19 +178,19 @@ def help(update, context):
 def a(bot, update):
     bot.send_message(chat_id=update.effective_chat.id, text="sssssssssss")
 play_handler = CommandHandler('play_word', play)
-updater.dispatcher.add_handler(play_handler)
+dispatcher.add_handler(play_handler)
 
 end_handler = CommandHandler('end', end_game)
-updater.dispatcher.add_handler(end_handler)
+dispatcher.add_handler(end_handler)
 
 end_handler = CommandHandler('a', a)
-updater.dispatcher.add_handler(end_handler)
+dispatcher.add_handler(end_handler)
 
 help_handler = CommandHandler('help', help)
-updater.dispatcher.add_handler(help_handler)
+dispatcher.add_handler(help_handler)
 
 message_handler = MessageHandler(Filters.text & (~Filters.command), scoring)
-updater.dispatcher.add_handler(message_handler)
+dispatcher.add_handler(message_handler)
 
 
 
